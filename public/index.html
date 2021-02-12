@@ -7,16 +7,27 @@
         <script src="/js/aframe.min.js"></script>
     </head>
     <body>
-        <a-scene id = "scene" physics="gravity:0">
+        <a-scene id = "scene" physics="gravity:-9.2">
             <a-entity camera wasd-controls look-controls position = "0 2.5 0">
                 <a-entity curser="rayOrigin:mouse;" raycaster = "far:20; interval:200; objects:.interactive"></a-entity>
             </a-entity>
+            <a-entity progressive-controls></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 180 0" position = "0 0 20"  material="color:#8a9596" static-body></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" position = "0 0 -20"  material="color:#8a9596" static-body></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 -90 0" position = "20 0 0"  material="color:#8a9596" static-body></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 90 0" position = "-20 0 0"  material="color:#8a9596" static-body></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
             <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "90 0 0" position = "0 10 0" material="color:#8a9596" static-body></a-entity>
+
+            <a-entity  id = "clue1"
+                position = "4 0 2"
+                rotation = "0 0 0"
+                geometry = "primative:box; width:1; height:1; depth:1;"
+                material="color:#484b4f"
+                grabbable dynamic-body>
+            </a-entity>
+
+            <a-sphere color="yellow" radius="1" position="0 0 0" grabbable dynamic-body>
         </a-scene>
     </body>
 </html>
