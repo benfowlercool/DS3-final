@@ -4,30 +4,51 @@
         <script src="https://unpkg.com/aframe-event-set-component@3.03/dist/aframe-event-set-component.min.js"></script>
         <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
-        <script src="/js/aframe.min.js"></script>
+        <!--<script src="/js/aframe.min.js"></script>-->
+        <script src="/js/aframe-environment-component.min.js"></script>
     </head>
     <body>
         <a-scene id = "scene" physics="gravity:-9.2">
-            <a-entity camera wasd-controls look-controls position = "0 2.5 0">
-                <a-entity curser="rayOrigin:mouse;" raycaster = "far:20; interval:200; objects:.interactive"></a-entity>
+            <a-entity id="player" progressive-controls>
+                <a-entity camera universal-controls look-controls position = "0 2.5 0" kinematic-body>
+                    <a-entity curser="rayOrigin:mouse;" raycaster = "far:20; interval:200; objects:.interactive"></a-entity>
+                    <a-entity position="0 0 0" light="type:spot; intensity:1.4; angle:40; penumbra:0.3; castShadow:true;"></a-entity>
+                </a-entity>
             </a-entity>
-            <a-entity progressive-controls></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 180 0" position = "0 0 20"  material="color:#8a9596" static-body></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" position = "0 0 -20"  material="color:#8a9596" static-body></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 -90 0" position = "20 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "0 90 0" position = "-20 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
-            <a-entity geometry="primitive: plane; height: 50; width: 50" rotation = "90 0 0" position = "0 10 0" material="color:#8a9596" static-body></a-entity>
+            
+            <!--<a-entity progressive-controls></a-entity>-->
+
+            <!--<a-entity id="player" movement-controls kinematic-body>
+                <a-entity id="camera"
+                          camera    
+                          position="0 1.6 0"
+                          look-controls="pointerLockEnabled: true"
+                          progressive-controls="objects: [grabbable], [droppable], [clickable]; gazeMixin: gazer; pointMixin: pointer; touchMixin: ctrlr">
+                          <a-entity position="0 0 0" light="type:spot; intensity:1.4; angle:40; penumbra:0.3; castShadow:true;"></a-entity>
+                    <a-entity cursor position="0 1.6 -1"></a-entity>
+                </a-entity>
+              </a-entity>-->
+
+            
+            
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 180 0" position = "0 0 20"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" position = "0 0 -20"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 -90 0" position = "20 0 0"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 90 0" position = "-20 0 0"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "90 0 0" position = "0 10 0" material="color:#8a9596" static-body></a-entity>
 
             <a-entity  id = "clue1"
                 position = "4 0 2"
                 rotation = "0 0 0"
+                cursor-listener
                 geometry = "primative:box; width:1; height:1; depth:1;"
                 material="color:#484b4f"
                 grabbable dynamic-body>
             </a-entity>
 
             <a-sphere color="yellow" radius="1" position="0 0 0" grabbable dynamic-body>
+            <a-entity environment="preset:starry"></a-entity>
         </a-scene>
     </body>
 </html>

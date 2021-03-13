@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/benfowlercool/DS3-final#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "super-hands": "^3.0.2"
   }
 }
