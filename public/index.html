@@ -8,10 +8,14 @@
         <script src="/js/aframe-environment-component.min.js"></script>
     </head>
     <body>
-        <a-scene id = "scene" physics="gravity:-9.2">
+        <a-scene id = "scene" physics="gravity:-10">
             <a-entity id="player" progressive-controls>
-                <a-entity camera universal-controls look-controls position = "0 2.5 0" kinematic-body>
-                    <a-entity curser="rayOrigin:mouse;" raycaster = "far:20; interval:200; objects:.interactive"></a-entity>
+                <a-entity camera universal-controls look-controls position = "0 1.5 0" kinematic-body>
+                    <a-entity cursor="fuse: true; fuseTimeout: 500"
+                        position="0 0 -1"
+                        geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
+                        material="color: green; shader: flat">
+                    </a-entity>
                     <a-entity position="0 0 0" light="type:spot; intensity:1.4; angle:40; penumbra:0.3; castShadow:true;"></a-entity>
                 </a-entity>
             </a-entity>
@@ -31,23 +35,42 @@
 
             
             
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 180 0" position = "0 0 20"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" position = "0 0 -20"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 -90 0" position = "20 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "0 90 0" position = "-20 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 50; width: 50" rotation = "90 0 0" position = "0 10 0" material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 180 0" position = "0 0 125"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" position = "0 0 -125"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 -90 0" position = "125 0 0"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 90 0" position = "-125 0 0"  material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
+            
 
             <a-entity  id = "clue1"
-                position = "4 0 2"
+                position = "104 1 23"
                 rotation = "0 0 0"
                 cursor-listener
-                geometry = "primative:box; width:1; height:1; depth:1;"
-                material="color:#484b4f"
-                grabbable dynamic-body>
+                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                material="color:red"
+                grabbable 
+                dynamic-body>
             </a-entity>
 
-            <a-sphere color="yellow" radius="1" position="0 0 0" grabbable dynamic-body>
+            <a-entity  id = "clue2"
+                position = "-108 1 -108"
+                rotation = "0 0 0"
+                cursor-listener
+                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                material="color:blue"
+                grabbable 
+                dynamic-body>
+            </a-entity>
+
+            <a-entity  id = "clue3"
+                position = "25 1 -120"
+                rotation = "0 0 0"
+                cursor-listener
+                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                material="color:green"
+                grabbable 
+                dynamic-body>
+            </a-entity>
             <a-entity environment="preset:starry"></a-entity>
         </a-scene>
     </body>
