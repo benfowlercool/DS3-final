@@ -6,11 +6,12 @@
         <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
         <!--<script src="/js/aframe.min.js"></script>-->
         <script src="/js/aframe-environment-component.min.js"></script>
+        <script src="/js/found-clue.js"></script>
     </head>
     <body>
         <a-scene id = "scene" physics="gravity:-10">
             <a-entity id="player" progressive-controls>
-                <a-entity camera universal-controls look-controls position = "0 1.5 0" kinematic-body>
+                <a-entity camera universal-controls look-controls position="0 1.5 0" kinematic-body>
                     <a-entity cursor="fuse: true; fuseTimeout: 500"
                         position="0 0 -1"
                         geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
@@ -42,42 +43,48 @@
             <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 3 0" material="color:#8a9596" static-body></a-entity>
             
-            <!--<a-entity  id = "testclue"
-                position = "-2 1 0"
+            <a-entity  id = "testclue">
+                <a-entity
+                class="button interactive"
+                animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                position = "-2 0 0"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
-                material="color:red"
+                material="color:rgb(255, 100, 100)"
                 grabbable 
-                dynamic-body>
-            </a-entity>-->
+                dynamic-body
+                found-clue></a-entity>
+            </a-entity>
 
             <a-entity  id = "clue1"
-                position = "104 1 23"
+                class="interactive"
+                position = "104 0 23"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
-                material="color:red"
+                material="color:rgb(255,100,100)"
                 grabbable 
                 dynamic-body>
             </a-entity>
 
             <a-entity  id = "clue2"
-                position = "-108 1 -108"
+                position = "-108 0 -108"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
-                material="color:blue"
+                material="color:rgb(100,255,100)"
                 grabbable 
                 dynamic-body>
             </a-entity>
 
             <a-entity  id = "clue3"
-                position = "25 1 -120"
+                position = "25 0 -120"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
-                material="color:green"
+                material="color:rgb(100,100,255)"
                 grabbable 
                 dynamic-body>
             </a-entity>
