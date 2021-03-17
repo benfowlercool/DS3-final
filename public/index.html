@@ -58,7 +58,8 @@
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity  id = "clue1"
+            <a-entity  id = "clue1">
+                <a-entity
                 class="interactive"
                 position = "104 0 23"
                 rotation = "0 0 0"
@@ -66,28 +67,34 @@
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(255,100,100)"
                 grabbable 
-                dynamic-body>
+                dynamic-body
+                found-clue></a-entity>
             </a-entity>
 
-            <a-entity  id = "clue2"
+            <a-entity  id = "clue2">
+                <a-entity
                 position = "-108 0 -108"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(100,255,100)"
                 grabbable 
-                dynamic-body>
+                dynamic-body
+                found-clue></a-entity>
             </a-entity>
 
-            <a-entity  id = "clue3"
+            <a-entity  id = "clue3">
+                <a-entity
                 position = "25 0 -120"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(100,100,255)"
                 grabbable 
-                dynamic-body>
+                dynamic-body
+                found-clue></a-entity>
             </a-entity>
+
             <a-entity environment="preset:starry"></a-entity>
         </a-scene>
     </body>
