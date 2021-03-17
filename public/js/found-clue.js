@@ -7,7 +7,6 @@ AFRAME.registerComponent("found-clue", {
         var entity = this.el;
         
         CONTEXT_AF.el.addEventListener("click", function() {
-            console.log("i am here")
             //var testclue = document.querySelector("#testclue")
                // testclue.parentNode.removeChild(testclue)
                entity.parentNode.removeChild(entity)

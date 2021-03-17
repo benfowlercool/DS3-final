@@ -1,20 +1,21 @@
 <html>
     <head> 
         <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-event-set-component@3.03/dist/aframe-event-set-component.min.js"></script>
-        <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
-        <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+        <!--<script src="https://unpkg.com/aframe-event-set-component@3.03/dist/aframe-event-set-component.min.js"></script>-->
+        <script src="https://unpkg.com/super-hands@^3.0.1/dist/super-hands.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
         <!--<script src="/js/aframe.min.js"></script>-->
         <script src="/js/aframe-environment-component.min.js"></script>
         <script src="/js/found-clue.js"></script>
     </head>
     <body>
         <a-scene id = "scene" physics="gravity:-10">
-            <a-entity id="player" progressive-controls>
-                <a-entity camera universal-controls look-controls position="0 1.5 0" kinematic-body>
+            <a-entity id="player" movement-controls >
+                <a-entity camera look-controls position="0 0 0" kinematic-body>
                     <a-entity cursor="fuse: true; fuseTimeout: 500"
-                        position="0 0 -1"
-                        geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.02"
+                        position="0 0 -0.01"
+                        geometry="primitive: ring; radiusInner: 0.0001; radiusOuter: 0.0002"
                         material="color: green; shader: flat">
                     </a-entity>
                     <a-entity position="0 0 0" light="type:spot; intensity:1.4; angle:40; penumbra:0.3; castShadow:true;"></a-entity>
@@ -43,7 +44,7 @@
             <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 3 0" material="color:#8a9596" static-body></a-entity>
             
-            <a-entity  id = "testclue">
+            <a-entity  id = "testclue" >
                 <a-entity
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
@@ -53,12 +54,11 @@
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(255, 100, 100)"
-                grabbable 
-                dynamic-body
+                hoverable grabbable stretchable draggable dropppable dynamic-body
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity  id = "clue1">
+            <a-entity  id = "clue1" >
                 <a-entity
                 class="interactive"
                 position = "104 0 23"
@@ -66,20 +66,18 @@
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(255,100,100)"
-                grabbable 
-                dynamic-body
+                hoverable grabbable stretchable draggable dropppable dynamic-body
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity  id = "clue2">
+            <a-entity  id = "clue2" >
                 <a-entity
                 position = "-108 0 -108"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(100,255,100)"
-                grabbable 
-                dynamic-body
+                hoverable grabbable stretchable draggable dropppable dynamic-body
                 found-clue></a-entity>
             </a-entity>
 
@@ -90,8 +88,7 @@
                 cursor-listener
                 geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
                 material="color:rgb(100,100,255)"
-                grabbable 
-                dynamic-body
+                hoverable grabbable stretchable draggable dropppable dynamic-body
                 found-clue></a-entity>
             </a-entity>
 
