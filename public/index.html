@@ -11,8 +11,8 @@
     </head>
     <body>
         <a-scene id = "scene" physics="gravity:-10">
-            <a-entity id="player" movement-controls >
-                <a-entity camera look-controls position="0 0 0" kinematic-body>
+            <a-entity id="player" movement-controls  kinematic-body >
+                <a-entity camera look-controls position="0 0 0">
                     <a-entity cursor="fuse: true; fuseTimeout: 500"
                         position="0 0 -0.01"
                         geometry="primitive: ring; radiusInner: 0.0001; radiusOuter: 0.0002"
@@ -37,58 +37,134 @@
 
             
             
-            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 180 0" position = "0 0 125"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" position = "0 0 -125"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 -90 0" position = "125 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 20; width: 250" rotation = "0 90 0" position = "-125 0 0"  material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" static-body></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 250; width: 250" rotation = "-90 0 0" position = "0 3 0" material="color:#8a9596" static-body></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 180 0" position = "0 0 50"  material="color:#8a9596" ></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 100" position = "0 0 -50"  material="color:#8a9596"></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 -90 0" position = "50 0 0"  material="color:#8a9596" ></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 90 0" position = "-50 0 0"  material="color:#8a9596" ></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 100; width: 100" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" ></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 100; width: 100" rotation = "-90 0 0" position = "0 3 0" material="color:#8a9596" ></a-entity>
+
+            <!--ROCKS ROCKS ROCKS ROCKS-->
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="46.5 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="45 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="43 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="46.5 -2.55 22" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="42 -2.55 23" rotation="0 24 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="40 -2.55 18" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="40 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="40 -2.55 20" rotation="0 145 0" scale="0.3 0.3 0.3"></a-entity>
+
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="38 -2.55 17" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="35 -2.55 20" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="38 -2.55 24" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
+
+            <!--CAVE CAVE CAVE CAVE-->
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="8 -2.55 -27" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="5 -2.55 -33" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 -24" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="3 -2.55 -33" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="8 -2.55 -24" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="5 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="12 -2.55 -43" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="12 -2.55 -30" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="14 -2.55 -45" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="18 -2.55 -33" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="16 -2.55 -36" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-3 -2.55 -32" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-3.5 -2.55 -32" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="-3 -2.55 -31.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="-4 -2.55 -31.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+
+            <!--FOREST FOREST FOREST FOREST-->
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-29 -2.55 35" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-29.5 -2.55 35" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="-29 -2.55 34.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="-30 -2.55 34.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="12 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="18 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="1 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-36 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-23 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-35 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-15 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-2 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-34 -2.55 5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="29 -2.55 -3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-4 -2.55 -23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="2 -2.55 -12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="34 -2.55 -5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-29 -2.55 3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-4 -2.55 23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-3 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
             
-            <a-entity  id = "testclue" >
+            <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" static-body="shape: auto;" position="12 -3 -39" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+
+            <!--<a-entity  id = "testclue" >
                 <a-entity
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                 animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
-                position = "-2 0 0"
+                position = "0 -2.45 -15"
                 rotation = "0 0 0"
                 cursor-listener
-                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
                 material="color:rgb(255, 100, 100)"
-                hoverable grabbable stretchable draggable dropppable dynamic-body
+                static-body
                 found-clue></a-entity>
-            </a-entity>
+            </a-entity>-->
 
             <a-entity  id = "clue1" >
                 <a-entity
-                class="interactive"
-                position = "104 0 23"
+                class="button interactive"
+                animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                position = "47 -1.5 23"
                 rotation = "0 0 0"
                 cursor-listener
-                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                geometry = "primative:box; width:0.1; height:0.1; depth:0.1"
                 material="color:rgb(255,100,100)"
-                hoverable grabbable stretchable draggable dropppable dynamic-body
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
             <a-entity  id = "clue2" >
                 <a-entity
-                position = "-108 0 -108"
+                class="button interactive"
+                animation__mouseenter="property:material.color; type:color; to:rgb(0, 255, 0); startEvents:mouseenter; dur:200"
+                animation__mouseleave="property:material.color; type:color; to:rgb(100, 255, 100); startEvents:mouseleave; dur:200"
+                position = "-36 -2.45 20"
                 rotation = "0 0 0"
                 cursor-listener
-                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
                 material="color:rgb(100,255,100)"
-                hoverable grabbable stretchable draggable dropppable dynamic-body
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
             <a-entity  id = "clue3">
                 <a-entity
-                position = "25 0 -120"
+                class="button interactive"
+                animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
+                animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
+                position = "12 -2.45 -39"
                 rotation = "0 0 0"
                 cursor-listener
-                geometry = "primative:box; width:0.2; height:0.2; depth:0.2;"
+                geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
                 material="color:rgb(100,100,255)"
-                hoverable grabbable stretchable draggable dropppable dynamic-body
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
