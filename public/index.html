@@ -28,7 +28,7 @@
             </a-entity>
 
             <a-assets>
-                <audio id="ambience" src="/Assets/ambient.mp3" preload="true" crossorigin="anonymous"></audio>
+                <audio id="ambience" src="/assets/ambient.mp3" preload="true" crossorigin="anonymous"></audio>
                 <img id="Wendigo" src="/Assets/Wendigo_Sketch.png" crossorigin="anonymous" >
                 <img id="Rock" src="/Assets/Rock1_Texture.png" crossorigin="anonymous" >
                 <img id="bloodRock" src="/Assets/BloodRockTextureV4.png" crossorigin="anonymous" >
@@ -48,7 +48,7 @@
                 </a-gui-button>
 
                 </a-gui-flex-container>-->
-            <a-entity position="0 0 0" sound="src: #ambience; autoplay:true; loop: true; volume: 10;"></a-entity>
+            <a-entity position="0 0 0" sound="src: #ambience; autoplay:true; loop: true; rolloffFactor:0.1;"></a-entity>
 
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 180 0" position = "0 0 50"  material="color:#8a9596" ></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" position = "0 0 -50"  material="color:#8a9596"></a-entity>
