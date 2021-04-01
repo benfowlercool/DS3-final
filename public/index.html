@@ -29,26 +29,16 @@
 
             <a-assets>
                 <img id="Wendigo" src="/Assets/Wendigo_Sketch.png" crossorigin="anonymous" >
+                <img id="Rock" src="/Assets/Rock1_Texture.png" crossorigin="anonymous" >
+                <img id="bloodRock" src="/Assets/BloodRockTextureV4.png" crossorigin="anonymous" >
+                <img id="Deer" src="/Assets/DeerCorpseTextureV2.png" crossorigin="anonymous" >
             </a-assets>
-
-            <!--<a-entity id="player" movement-controls kinematic-body>
-                <a-entity id="camera"
-                          camera    
-                          position="0 1.6 0"
-                          look-controls="pointerLockEnabled: true"
-                          progressive-controls="objects: [grabbable], [droppable], [clickable]; gazeMixin: gazer; pointMixin: pointer; touchMixin: ctrlr">
-                          <a-entity position="0 0 0" light="type:spot; intensity:1.4; angle:40; penumbra:0.3; castShadow:true;"></a-entity>
-                    <a-entity cursor position="0 1.6 -1"></a-entity>
-                </a-entity>
-              </a-entity>-->
 
               <a-entity id="WendigoScreen" position="0 -2.2 -1.99"
               geometry="primitive:plane; width:0.15; height:0.3;" 
               material="src:#Wendigo;"></a-entity>
 
-              <a-entity text="value: Hello World; color: red; positon: 0 -10 "></a-entity>
-
-              <a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="1" width="0.4" height="0.7" panel-color="#000" panel-rounded="0.1" position="0 -2.2 -2" rotation="0 0 0" gui-item="" rounded="" gui-flex-container="">
+              <!--<a-gui-flex-container flex-direction="column" justify-content="center" align-items="normal" component-padding="0.1" opacity="1" width="0.4" height="0.7" panel-color="#000" panel-rounded="0.1" position="0 -2.2 -2" rotation="0 0 0" gui-item="" rounded="" gui-flex-container="">
                 <a-gui-label width="0.2" height="0.051" value="Wendigo" font-family="assets/fonts/DiplomataSC-Regular.ttf" font-size="0.05" line-height="0.8" letter-spacing="0" margin="0 0 0.37  0" gui-item="" geometry="" material="" gui-label="" position="0 1 0"></a-gui-label>
 
                 <a href="main menu.html">Solve</a>
@@ -56,13 +46,13 @@
                 <a-gui-button width="0.22" height="0.08" onclick="testButtonAction" value="This Ghost" font-size="0.03" margin="0 0 0 0" role="button">
                 </a-gui-button>
 
-            </a-gui-flex-container>
+                </a-gui-flex-container>-->
 
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 180 0" position = "0 0 50"  material="color:#8a9596" ></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" position = "0 0 -50"  material="color:#8a9596"></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 -90 0" position = "50 0 0"  material="color:#8a9596" ></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 20; width: 100" rotation = "0 90 0" position = "-50 0 0"  material="color:#8a9596" ></a-entity>
-            <a-entity static-body geometry="primitive: plane; height: 100; width: 100" rotation = "-90 0 0" position = "0 -2.5 0" material="color:#8a9596" ></a-entity>
+            <a-entity static-body geometry="primitive: plane; height: 100; width: 100" rotation = "-90 0 0" position = "0 -2.5 0" material="color:rgb(51,102,0); roughness:5" ></a-entity>
             <a-entity static-body geometry="primitive: plane; height: 100; width: 100" rotation = "-90 0 0" position = "0 3 0" material="color:#8a9596" ></a-entity>
 
             <!--HUB HUB HUB HUB-->
@@ -75,70 +65,71 @@
             <a-entity static-body geometry="primitive: box;  width:0.1; height:3; depth:0.1;"position = "0 -1.55 -4" material="color:#8a9596" ></a-entity>
 
             <!--ROCKS ROCKS ROCKS ROCKS-->
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="46.5 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="45 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="43 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="46.5 -2.55 22" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="42 -2.55 23" rotation="0 24 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="40 -2.55 18" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="40 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="40 -2.55 20" rotation="0 145 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity position="">
+                <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="46.5 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="45 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#bloodRock;" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="43 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="46.5 -2.55 22" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="42 -2.55 23" rotation="0 24 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="40 -2.55 18" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="40 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="40 -2.55 20" rotation="0 145 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="38 -2.55 17" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="35 -2.55 20" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="38 -2.55 24" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
-
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="38 -2.55 17" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="35 -2.55 20" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
+                <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="38 -2.55 24" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
+            </a-entity>
             <!--CAVE CAVE CAVE CAVE-->
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="8 -2.55 -27" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="5 -2.55 -33" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 -24" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="3 -2.55 -33" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="8 -2.55 -24" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="5 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="8 -2.55 -27" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="5 -2.55 -33" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="3 -2.55 -24" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="3 -2.55 -33" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="8 -2.55 -24" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="5 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="12 -2.55 -43" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="12 -2.55 -30" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="14 -2.55 -45" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="18 -2.55 -33" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="16 -2.55 -36" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="12 -2.55 -43" rotation="0 12 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="12 -2.55 -30" rotation="0 -45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="14 -2.55 -45" rotation="0 202 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body="shape: mesh" position="18 -2.55 -33" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body="shape: mesh" position="16 -2.55 -36" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-3 -2.55 -32" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-3.5 -2.55 -32" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="-3 -2.55 -31.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="-4 -2.55 -31.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="-3 -2.55 -32" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="-3.5 -2.55 -32" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body="shape: mesh" position="-3 -2.55 -31.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body="shape: mesh" position="-4 -2.55 -31.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
 
             <!--FOREST FOREST FOREST FOREST-->
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-29 -2.55 35" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body="shape: mesh" position="-29.5 -2.55 35" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body="shape: mesh" position="-29 -2.55 34.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body="shape: mesh" position="-30 -2.55 34.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="-29 -2.55 35" rotation="0 4 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body="shape: mesh" position="-29.5 -2.55 35" rotation="0 202 0" scale="0.5 0.5 0.5"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body="shape: mesh" position="-29 -2.55 34.5" rotation="0 45 0" scale="0.8 0.8 0.8"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body="shape: mesh" position="-30 -2.55 34.5" rotation="0 7 0" scale="0.8 0.8 0.8"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="12 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="18 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="1 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-36 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-23 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-35 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-15 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="12 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="18 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="3 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="1 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="-36 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="-23 -2.55 23" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="-35 -2.55 28" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="-29 -2.55 2" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="-16 -2.55 5" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="-15 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-2 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-34 -2.55 5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="29 -2.55 -3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-4 -2.55 -23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="3 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="2 -2.55 -12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="34 -2.55 -5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock1.obj)" static-body position="-29 -2.55 3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock2.obj)" static-body position="-4 -2.55 23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/Rock3.obj)" static-body position="-3 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="-2 -2.55 12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="-34 -2.55 5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="-16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="29 -2.55 -3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="-4 -2.55 -23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="3 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="2 -2.55 -12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="34 -2.55 -5" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="16 -2.55 -22" rotation="0 -42 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="-29 -2.55 3" rotation="0 45 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="-4 -2.55 23" rotation="0 7 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="-3 -2.55 35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
             <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-3 -2.55 12" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
             <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-25 -2.55 -44" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
@@ -190,61 +181,61 @@
 
             <a-entity obj-model="obj: url(/assets/shack.obj)" static-body position="-35 -2.55 -28" rotation="0 50 0" scale="0.2 0.2 0.2"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/DeerCorpse.obj)" static-body position="-36 -2.55 20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/DeerCorpseV2.obj)" material="src:#Deer;" static-body position="-36 -2.55 20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-31 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-32 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-33 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-34 -2.55 24" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-33 -2.55 17" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-39 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-30 -2.55 17" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="-31 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="-38 -2.55 21" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="-39 -2.55 22" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="-37 -2.55 19" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="-38 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-31 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-32 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-33 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-34 -2.55 24" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-33 -2.55 17" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-39 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-30 -2.55 17" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="-31 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="-38 -2.55 21" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="-39 -2.55 22" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="-37 -2.55 19" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="-38 -2.55 18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="17 -2.55 -39" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="18 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="19 -2.55 -31" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="28 -2.55 -32" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="27 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="25 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="22 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="19 -2.55 -36" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="24 -2.55 -37" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="22 -2.55 -38" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="25 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="18 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="17 -2.55 -39" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="18 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="19 -2.55 -31" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="28 -2.55 -32" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="27 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="25 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="22 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="19 -2.55 -36" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="24 -2.55 -37" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="22 -2.55 -38" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="25 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="18 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="28 -2.55 -39" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="29 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="30 -2.55 -31" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="31 -2.55 -32" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="32 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="33 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="34 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="37 -2.55 -36" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="38 -2.55 -37" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="40 -2.55 -38" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="42 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="38 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="28 -2.55 -39" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="29 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="30 -2.55 -31" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="31 -2.55 -32" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="32 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="33 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="34 -2.55 -35" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="37 -2.55 -36" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="38 -2.55 -37" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="40 -2.55 -38" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="42 -2.55 -33" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="38 -2.55 -34" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="28 -2.55 -21" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="29 -2.55 -22" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="30 -2.55 -23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="31 -2.55 -24" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="32 -2.55 -25" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="33 -2.55 -26" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="34 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body="shape: mesh;" position="37 -2.55 -18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="38 -2.55 -19" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="40 -2.55 -18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="42 -2.55 -25" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body="shape: mesh;" position="38 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="28 -2.55 -21" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="29 -2.55 -22" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="30 -2.55 -23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="31 -2.55 -24" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="32 -2.55 -25" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="33 -2.55 -26" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="34 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1.obj)" static-body position="37 -2.55 -18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="38 -2.55 -19" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="40 -2.55 -18" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="42 -2.55 -25" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree2.obj)" static-body position="38 -2.55 -27" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
             
-            <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" static-body="shape: auto;" position="12 -3 -39" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" material="src:#Rock;"  static-body="shape: mesh;" position="12 -3 -39" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
 
             <!--<a-entity  id = "testclue" >
                 <a-entity
@@ -265,7 +256,7 @@
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                 animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
-                position = "47 -1.5 23"
+                position = "46.6 -2 23"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.1; height:0.1; depth:0.1"
