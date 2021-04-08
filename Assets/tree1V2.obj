@@ -460,7 +460,7 @@ vn 0.000000 -1.000000 0.000000
 vn 0.000000 -1.000000 0.000000
 s 1
 g pCylinder1
-usemtl initialShadingGroup
+usemtl standardSurface2SG
 f 1/29/1 2/125/2 10/172/3 9/30/4
 s 2
 f 2/171/5 3/19/6 11/22/7 10/126/8
