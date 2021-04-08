@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div class="Clue Book">
+            <img class="cluePages" src="assets/clue1.png">
+            <img class="cluePages" src="assets/clue2.png">
+            <img class="cluePages" src="assets/clue3.png">
+            <h2>Flip Pages</h2>
+            <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
+          
+          <script>
+          var slideIndex = 1;
+          showDivs(slideIndex);
+          
+          function plusDivs(n) {
+            showDivs(slideIndex += n);
+          }
+          
+          function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("cluePages");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+          }
+          </script>
+
+          <h2>Check clues</h2>
+            
+                <input type="checkbox" id="clue1" name="clue1" value="ashes">
+                <label for="clue1">Ashes</label><br>
+                <input type="checkbox" id="clue2" name="clue2" value="red bird">
+                <label for="clue2">Red Birds</label><br><br>
+                <input type="checkbox" id="clue3" name="clue3" value="cave">
+                <label for="clue3">Cave</label><br>
+                <input type="checkbox" id="clue4" name="clue4" value="scratched rock">
+                <label for="clue4">Scratched rock</label><br><br>
+                <input type="checkbox" id="clue5" name="clue5" value="sword">
+                <label for="clue5">Sword</label><br><br>
+                <input type="checkbox" id="clue6" name="clue6" value="pipe">
+                <label for="clue6">Pipe</label><br>
+                <input type="checkbox" id="clue7" name="clue7" value="dead animal">
+                <label for="clue7">Dead Animal</label><br>
+                <input type="checkbox" id="clue8" name="clue8" value="box">
+                <label for="clue8">Box</label><br><br>
+    </body>
+</html>
