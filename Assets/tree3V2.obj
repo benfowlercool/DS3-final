@@ -1696,7 +1696,7 @@ vn 0.791580 0.237590 0.562985
 vn 0.791580 0.237590 0.562985
 s 1
 g pCylinder1
-usemtl initialShadingGroup
+usemtl standardSurface2SG
 f 1/65/1 2/390/2 10/391/3 9/66/4
 s 2
 f 2/390/5 3/1/6 11/4/7 10/391/8
