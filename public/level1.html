@@ -66,6 +66,7 @@
                 <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="46.5 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
                 <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="45 -2.55 24" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
                 <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#bloodRock;" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
+                <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="47 -2.55 23"></a-entity>
                 <a-entity obj-model="obj: url(/assets/Rock1.obj)" material="src:#Rock;" static-body position="43 -2.55 23" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
                 <a-entity obj-model="obj: url(/assets/Rock2.obj)" material="src:#Rock;" static-body position="46.5 -2.55 22" rotation="0 -67 0" scale="0.3 0.3 0.3"></a-entity>
                 <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#Rock;" static-body position="42 -2.55 23" rotation="0 24 0" scale="0.3 0.3 0.3"></a-entity>
@@ -176,9 +177,7 @@
             <a-entity obj-model="obj: url(/assets/tree3V2.obj)" material="src:#tree3V2;"   position="3 -2.55 0" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
             <a-entity obj-model="obj: url(/assets/tree3V2.obj)" material="src:#tree3V2;"   position="20 -2.55 4" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
-            <a-entity obj-model="obj: url(/assets/shack.obj)" static-body position="-35 -2.55 -28" rotation="0 50 0" scale="0.2 0.2 0.2"></a-entity>
-
-            <a-entity obj-model="obj: url(/assets/DeerCorpseV2.obj)" material="src:#Deer;" static-body position="-36 -2.55 20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
+            
 
             <a-entity obj-model="obj: url(/assets/tree1V2.obj)" material="src:#tree1V2;"   position="-31 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
             <a-entity obj-model="obj: url(/assets/tree1V2.obj)" material="src:#tree1V2;"  position="-32 -2.55 23" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
@@ -588,7 +587,12 @@
 
             </a-entity>
             
+            <a-entity obj-model="obj: url(/assets/shack.obj)" static-body position="-35 -2.55 -28" rotation="0 50 0" scale="0.2 0.2 0.2"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-35 -2.55 -28"></a-entity>
+            <a-entity obj-model="obj: url(/assets/DeerCorpseV2.obj)" material="src:#Deer;" static-body position="-36 -2.55 20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-36 -2.55 20"></a-entity>
             <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" material="src:#Rock;"  static-body="shape: mesh;" position="12 -3 -39" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="12 -3 -39"></a-entity>
 
             <!--<a-entity  id = "testclue" >
                 <a-entity
