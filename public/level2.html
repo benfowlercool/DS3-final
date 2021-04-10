@@ -29,6 +29,7 @@
                 <img id="Rock" src="/Assets/Rock1_Texture.png" crossorigin="anonymous" >
                 <img id="sword" src="/Assets/SwordTextureV2.png" crossorigin="anonymous" >
                 <img id="crate" src="/Assets/WoodenCrateTexture.png" crossorigin="anonymous" >
+                <img id="bird" src="/Assets/redbirdtexture.png" crossorigin="anonymous" >
                 <!--<img id="bird" src="/Assets/SwordTextureV2.png" crossorigin="anonymous" >-->
                 <img id="tree1V2" src="/Assets/tree1texture.png" crossorigin="anonymous" >
                 <img id="tree2V2" src="/Assets/tree2texture.png" crossorigin="anonymous" >
@@ -590,6 +591,9 @@
             <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-35 -2.55 -28"></a-entity>
             <a-entity obj-model="obj: url(/assets/RustedSword.obj)" material="src:#sword;" static-body position="36 -2.45 20" rotation="90 -24 0" scale="0.05 0.05 0.05"></a-entity>
             <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="36 -2.45 20"></a-entity>
+            <a-entity obj-model="obj: url(/assets/tree1V2.obj)" material="src:#tree1V2;"  position="5 -2.55 0" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity obj-model="obj: url(/assets/redBird.obj)" material="src:#bird;" static-body position="5 -2.55 2" rotation="90 0 0" scale="0.05 0.05 0.05"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="5 -2.55 2"></a-entity>
             <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" material="src:#Rock;"  static-body="shape: mesh;" position="-39 -3 -12" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
             <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-39 -3 -12"></a-entity>
 
