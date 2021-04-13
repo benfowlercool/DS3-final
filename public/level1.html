@@ -27,9 +27,8 @@
                 <audio id="ambience" src="/assets/ambient.mp3" preload="true" crossorigin="anonymous"></audio>
                 <img id="Wendigo" src="/Assets/Wendigo_Sketch.png" crossorigin="anonymous" >
                 <img id="Rock" src="/Assets/Rock1_Texture.png" crossorigin="anonymous" >
-                <img id="Pipe" src="/Assets/PipeTextureV4.png" crossorigin="anonymous" >
+                <img id="bloodRock" src="/Assets/BloodRockTextureV4.png" crossorigin="anonymous" >
                 <img id="Deer" src="/Assets/DeerCorpseTextureV2.png" crossorigin="anonymous" >
-                <img id="ash" src="/Assets/AshPileTexture.png" crossorigin="anonymous" >
                 <img id="tree1V2" src="/Assets/tree1texture.png" crossorigin="anonymous" >
                 <img id="tree2V2" src="/Assets/tree2texture.png" crossorigin="anonymous" >
                 <img id="tree3V2" src="/Assets/tree3texture.png" crossorigin="anonymous" >
@@ -48,8 +47,8 @@
             material="src:#Wendigo;"
             ></a-entity>
 
-              <a-gui-flex-container flex-direction="row" justify-content="center" align-items="normal" component-padding="0.1" opacity="1" width="2" height="1" panel-color="#000" panel-rounded="0.1" position="0 -2 -2" rotation="0 0 0" gui-item="" rounded="" gui-flex-container="">
-                
+            <a-gui-flex-container flex-direction="row" justify-content="center" align-items="normal" component-padding="0.1" opacity="1" width="2" height="1" panel-color="#000" panel-rounded="0.1" position="0 -2 -2" rotation="0 0 0" gui-item="" rounded="" gui-flex-container="">
+                   
                 <a-gui-label width="0.3" height="0.1" value="Wendigo" font-family="assets/fonts/DiplomataSC-Regular.ttf" font-size="0.05" line-height="0.8" letter-spacing="0" margin="0 .2 0.37  0" gui-item="" geometry="" material="" gui-label="" ></a-gui-label>
 
                 <a-gui-label width="0.3" height="0.1" value="Goddess of Light" font-family="assets/fonts/DiplomataSC-Regular.ttf" font-size="0.05" line-height="0.8" letter-spacing="0" margin="0 .2 0.37  0" gui-item="" geometry="" material="" gui-label="" ></a-gui-label>
@@ -58,9 +57,9 @@
             </a-gui-flex-container>
 
             <a-gui-flex-container flex-direction="row" justify-content="center" align-items="normal" component-padding="0.01" opacity="0" width="2" height="0.4" panel-color="#000" panel-rounded="0.1" position="0 -2.4 -2" rotation="0 0 0" gui-item="" rounded="" gui-flex-container="">
+            <a-gui-button width="0.22" height="0.08" onclick="window.location.href='learnWendigo.html'" value="This Ghost" font-size="0.03" margin="0 .25 0 0" role="button" ></a-gui-button>
             <a-gui-button width="0.22" height="0.08" onclick="window.location.href='lose.html'" value="This Ghost" font-size="0.03" margin="0 .25 0 0" role="button" ></a-gui-button>
             <a-gui-button width="0.22" height="0.08" onclick="window.location.href='lose.html'" value="This Ghost" font-size="0.03" margin="0 .25 0 0" role="button" ></a-gui-button>
-            <a-gui-button width="0.22" height="0.08" onclick="window.location.href='learnTobacco.html'" value="This Ghost" font-size="0.03" margin="0 .25 0 0" role="button" ></a-gui-button>
             </a-gui-flex-container>
 
             <a-entity position="0 0 0" sound="src: #ambience; autoplay:true; loop: true; rolloffFactor:0.1;"></a-entity>
@@ -604,10 +603,7 @@
                 <a-entity obj-model="obj: url(/assets/tree1V2.obj)" material="src:#tree1V2;"  position="27 -2.55 -8" rotation="0 -104 0" scale="0.3 0.3 0.3"></a-entity>
 
             </a-entity>
-
-
             
-
 
             <!--<a-entity  id = "testclue" >
                 <a-entity
@@ -623,63 +619,69 @@
                 found-clue></a-entity>
             </a-entity>-->
 
-            <a-entity obj-model="obj: url(/assets/Pipe.obj)" material="src:#Pipe;" static-body position="-35 -2.5 -28" rotation="-12 50 0" scale="0.08 0.08 0.08"></a-entity>
-            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-35 -2.3 -28"></a-entity>
+            <a-entity obj-model="obj: url(/assets/shack.obj)" static-body position="-35 -2.55 -28" rotation="0 50 0" scale="0.2 0.2 0.2"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-34 -2.3 -27"></a-entity>
             <a-entity  id = "clue1" >
                 <a-entity
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
                 animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
-                position = "-35 -2.4 -28"
+                position = "-34 -2.4 -27"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.1; height:0.1; depth:0.1"
                 material="color:rgb(255,100,100)"
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity obj-model="obj: url(/assets/AshPile.obj)" material="src:#ash;" static-body position="-30 -2.55 -20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-30 -2.3 -20"></a-entity>
+            <a-entity obj-model="obj: url(/assets/DeerCorpseV2.obj)" material="src:#Deer;" static-body position="-36 -2.55 20" rotation="0 -24 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="-36 -2.3 20"></a-entity>
             <a-entity  id = "clue2" >
                 <a-entity
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(0, 255, 0); startEvents:mouseenter; dur:200"
                 animation__mouseleave="property:material.color; type:color; to:rgb(100, 255, 100); startEvents:mouseleave; dur:200"
-                position = "-30 -2.4 -20"
+                position = "-35.7 -2.3 20"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
                 material="color:rgb(100,255,100)"
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity obj-model="obj: url(/assets/DeerCorpseV2.obj)" material="src:#Deer;" static-body position="12 -2.55 29" rotation="0 90 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="12 -2.3 29"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#bloodRock;" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="47 -2.55 23"></a-entity>
+            <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" material="src:#Rock;"  static-body="shape: mesh;" position="12 -3 -39" rotation="0 -20 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="12 -2.3 -39"></a-entity>
             <a-entity  id = "clue3">
                 <a-entity
                 class="button interactive"
                 animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
                 animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
-                position = "12 -2.4 28.5"
+                position = "12 -2.4 -39"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
                 material="color:rgb(100,100,255)"
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
-            <a-entity id="cave" obj-model="obj: url(/assets/Cave.obj)" material="src:#Rock;"  static-body="shape: mesh;" position="37 -3 -14" rotation="0 -70 0" scale="0.3 0.3 0.3"></a-entity>
-            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="37 -2.3 -14"></a-entity>
+            <a-entity obj-model="obj: url(/assets/Rock3.obj)" material="src:#bloodRock;" static-body position="47 -2.55 23" rotation="0 240 0" scale="0.3 0.3 0.3"></a-entity>
+            <a-entity light="type: point; color: #BBB intensity: 0.5; distance: 2; decay: 2" position="46.5 -2.2 22.8"></a-entity>
             <a-entity  id = "clue4">
                 <a-entity
                 class="button interactive"
-                animation__mouseenter="property:material.color; type:color; to:rgb(0, 0, 255); startEvents:mouseenter; dur:200"
-                animation__mouseleave="property:material.color; type:color; to:rgb(100, 100, 255); startEvents:mouseleave; dur:200"
-                position = "37 -2.4 -14"
+                animation__mouseenter="property:material.color; type:color; to:rgb(255, 0, 0); startEvents:mouseenter; dur:200"
+                animation__mouseleave="property:material.color; type:color; to:rgb(255, 100, 100); startEvents:mouseleave; dur:200"
+                position = "46.5 -2.25 22.8"
                 rotation = "0 0 0"
                 cursor-listener
                 geometry = "primative:box; width:0.1; height:0.1; depth:0.1;"
-                material="color:rgb(100,100,255)"
+                material="color:rgb(255,100,100)"
+                static-body
                 found-clue></a-entity>
             </a-entity>
 
